@@ -8,7 +8,7 @@
 
 请从 [GitHub Releases](https://github.com/Carlor-Official/Mengka-User-System/releases/latest) 下载与系统架构对应的外发包：
 
-当前版本：**1.0.4**，配合萌卡 NT 2.0.1 使用。详细变更见 [v1.0.4 版本说明](release-notes-v1.0.4.md)。
+当前版本：**1.0.5**，配合萌卡 NT 2.0.2 使用。详细变更见 [v1.0.5 版本说明](release-notes-v1.0.5.md)。
 
 | 平台 | 外发包 | 启动入口 |
 | --- | --- | --- |
@@ -20,7 +20,7 @@
 
 ## 使用要求
 
-- 使用萌卡 NT 2.0.1 提供的当前管理 API；插件通过框架服务 Token 认证后可直接调用，不需要“系统管理”开关或 action 授权清单。
+- 使用萌卡 NT 2.0.2 提供的当前管理 API；插件通过框架服务 Token 认证后可直接调用，不需要“系统管理”开关或 action 授权清单。
 - 配置框架分配的服务 Token 与服务 ID。插件管理端地址只用于管理员 SSO 和快捷入口，可以留空。
 - 首次运行前将 `config.example.yaml` 复制为 `config.yaml`，按实际环境填写监听地址、框架地址和端口。
 - `data` 目录包含插件数据库和本地主密钥，升级前必须完整备份，且不得公开分享。

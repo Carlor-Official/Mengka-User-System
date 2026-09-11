@@ -8,7 +8,7 @@
 
 请从 [GitHub Releases](https://github.com/Carlor-Official/Mengka-User-System/releases/latest) 下载与系统架构对应的外发包：
 
-当前版本：**2.0.6**，推荐配合萌卡 NT **2.1.1 或更新版本** 使用。详细变更与升级说明见 [v2.0.6 版本说明](release-notes-v2.0.6.md)。
+当前版本：**2.0.7**，推荐配合萌卡 NT **2.1.1 或更新版本** 使用。详细变更与升级说明见 [v2.0.7 版本说明](release-notes-v2.0.7.md)。
 
 | 平台 | 外发包 | 启动入口 |
 | --- | --- | --- |

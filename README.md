@@ -8,7 +8,7 @@
 
 请从 [GitHub Releases](https://github.com/Carlor-Official/Mengka-User-System/releases/latest) 下载与系统架构对应的外发包：
 
-当前版本：**2.0.8**，推荐配合萌卡 NT **2.1.1 或更新版本** 使用。本版新增套餐到期时间、站点标题、账号状态同步及在线更新入口。详细变更与升级说明见 [v2.0.8 版本说明](release-notes-v2.0.8.md)。
+当前版本：**2.0.9**，推荐配合萌卡 NT **2.1.5 或更新版本** 使用。本版修复用户端和管理端 Linux 免扫码登录被错误取消的问题，并补充 Linux 托管运行要求。详细变更与升级说明见 [v2.0.9 版本说明](release-notes-v2.0.9.md)。
 
 | 平台 | 外发包 | 启动入口 |
 | --- | --- | --- |
@@ -20,7 +20,9 @@
 
 ## 在线更新
 
-首次接入仍需手动安装 v2.0.8。独立部署后续可从管理员设置检查 GitHub 更新；托管在线更新需包含相应接口的配套框架，现有 v2.1.4 尚不含该接口，请继续按原方式手动升级托管插件。Linux 服务账号需要安装目录写权限，并同步新版 unit 的 ReadWritePaths。
+首次接入需手动安装；已安装 v2.0.8 的独立部署可从管理员设置检查 GitHub 更新。托管在线更新需框架 v2.1.5 或更新版本，同时等待候选插件版本通过市场审核。Linux 独立服务账号需要安装目录写权限，并同步新版 unit 的 ReadWritePaths。
+
+Linux 框架 v2.1.5 的托管模式要求框架以 root 系统服务运行，并具备 `bubblewrap`、`util-linux` 和 `useradd`。如出现 `isolated managed plugins require the framework system service to run as root`，插件尚未启动，应先检查框架服务身份与依赖；插件子进程仍在隔离环境中降权运行。详见[框架托管部署说明](https://github.com/Carlor-Official/Mengka-NT/blob/v2.1.5/docs/managed-plugins.md#linux-托管运行环境)。
 
 ## 使用要求
 

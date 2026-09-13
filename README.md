@@ -8,7 +8,7 @@
 
 请从 [GitHub Releases](https://github.com/Carlor-Official/Mengka-User-System/releases/latest) 下载与系统架构对应的外发包：
 
-当前版本：**2.0.13**，推荐配合萌卡 NT **2.1.8 或更新版本** 使用。本版修复门户缓存导致的状态滞后、跨用户数据显示及站点标题闪动。详细变更与升级说明见 [v2.0.13 版本说明](release-notes-v2.0.13.md)。
+当前版本：**2.0.14**，托管部署请先升级萌卡 NT 至 **2.2.0 或更新版本**。本版修复 Linux GLIBC 兼容性，适配框架自动托管并简化一键用户门户。详细变更与升级说明见 [v2.0.14 版本说明](release-notes-v2.0.14.md)。
 
 | 平台 | 外发包 | 启动入口 |
 | --- | --- | --- |
@@ -20,16 +20,18 @@
 
 ## 在线更新
 
-首次接入需手动安装；已安装 v2.0.8 的独立部署可从管理员设置检查 GitHub 更新。托管在线更新需框架 v2.1.5 或更新版本，同时等待候选插件版本通过市场审核。Linux 独立服务账号需要安装目录写权限，并同步新版 unit 的 ReadWritePaths。
+首次接入需手动安装；已安装 v2.0.8 的独立部署可从管理员设置检查 GitHub 更新。本版托管在线更新需框架 v2.2.0 或更新版本，同时等待候选插件版本通过市场审核。Linux 独立服务账号需要安装目录写权限，并同步新版 unit 的 ReadWritePaths。
 
-Linux 框架 v2.1.5 的托管模式要求框架以 root 系统服务运行，并具备 `bubblewrap`、`util-linux` 和 `useradd`。如出现 `isolated managed plugins require the framework system service to run as root`，插件尚未启动，应先检查框架服务身份与依赖；插件子进程仍在隔离环境中降权运行。详见[框架托管部署说明](https://github.com/Carlor-Official/Mengka-NT/blob/v2.1.5/docs/managed-plugins.md#linux-托管运行环境)。
+框架 v2.2.0 将托管插件作为普通子进程运行，不再要求原有隔离工具和独立低权限用户。插件使用框架运行用户的权限；请保证该用户可访问程序和数据目录。管理会话跟随当前设备的框架长期登录。详见[框架托管部署说明](https://github.com/Carlor-Official/Mengka-NT/blob/v2.2.0/docs/managed-plugins.md)。
 
 ## 使用要求
 
-- 先升级萌卡 NT 2.0.9 或更新版本（新同域门户需 2.1.8+）；插件服务不绑定节点，账号操作由框架按照 `self_id + client_type` 路由到账号自己的登录节点。
+- Linux AMD64 / ARM64 要求 GLIBC 2.28 及以上和系统标准 C++ 运行库；不包含 musl/Alpine。
+
+- 托管部署先升级萌卡 NT 2.2.0 或更新版本；插件服务不绑定节点，账号操作由框架按照 `self_id + client_type` 路由到账号自己的登录节点。
 - 插件通过框架服务 Token 认证后可直接调用管理 API，不需要“系统管理”开关或 action 授权清单。
 - 独立部署可选择正向或反向 WS，填写地址、端口与 Token，首次启动创建自己的管理员。市场自动部署由框架分配连接，支持 SSO 快捷初始化管理员。
-- 独立部署时将 `config.example.yaml` 复制为 `config.yaml`，填写监听地址与连接信息。市场安装包含 `managed`，由框架自动配置；管理入口和用户门户均支持 HTTP / HTTPS、IP / 域名。
+- 独立部署时将 `config.example.yaml` 复制为 `config.yaml`，填写监听地址与连接信息。市场安装选择 `managed` 包，由框架自动配置。用户门户通过框架对外地址加 `/user/` 访问，不再在插件内配置 SSL、域名、端口或反向代理。旧独立门户地址需重新分享。
 - 从 2.x 更新：停止插件并备份配置和整个 `data` 目录，替换程序与启动脚本，保留原数据库和主密钥。
 - 从 1.x 升级：必须使用独立新目录和全新的 `data/user-system-v2.db`，不读取、迁移或修改 1.x 旧库，旧配置不能直接复用。
 - `data` 目录包含插件数据库和本地主密钥，升级前必须完整备份，且不得公开分享。主密钥用于解密配置及卡密，不能丢失。

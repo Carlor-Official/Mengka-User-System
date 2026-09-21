@@ -8,13 +8,13 @@
 
 请从 [GitHub Releases](https://github.com/Carlor-Official/Mengka-User-System/releases/latest) 下载与系统架构对应的外发包：
 
-当前版本：**2.1.0**，需萌卡 NT **2.4.1 或更新版本**。本版补齐 Windows AMD64、Linux AMD64 和 Linux ARM64 三个平台的 `native-ipc-v1` 外发包。详细变更与升级说明见 [v2.1.0 版本说明](release-notes-v2.1.0.md)。
+当前版本：**2.1.1**，需萌卡 NT **2.4.4 或更新版本**。本版修复用户分页、等级状态、账号归属与授权同步，并统一框架同域门户。提供 Windows AMD64、Linux AMD64 和 Linux ARM64 三个平台的 `native-ipc-v1` 外发包。详细变更与升级说明见 [v2.1.1 版本说明](release-notes-v2.1.1.md)。
 
 | 平台 | 外发包 | 启动入口 |
 | --- | --- | --- |
-| Windows AMD64 | `mengka-user-system-2.1.0-managed-native-windows-amd64.zip` | 框架插件导入 |
-| Linux AMD64 | `mengka-user-system-2.1.0-managed-native-linux-amd64.tar.gz` | 框架插件导入 |
-| Linux ARM64 | `mengka-user-system-2.1.0-managed-native-linux-arm64.tar.gz` | 框架插件导入 |
+| Windows AMD64 | `mengka-user-system-2.1.1-managed-native-windows-amd64.zip` | 框架插件导入 |
+| Linux AMD64 | `mengka-user-system-2.1.1-managed-native-linux-amd64.tar.gz` | 框架插件导入 |
+| Linux ARM64 | `mengka-user-system-2.1.1-managed-native-linux-arm64.tar.gz` | 框架插件导入 |
 
 下载后可使用同一 Release 中的 `SHA256SUMS.txt` 校验文件完整性。不同系统和架构的外发包不能混用。
 
@@ -26,8 +26,8 @@
 
 - Linux AMD64 / ARM64 要求 GLIBC 2.28 及以上和系统标准 C++ 运行库；不包含 musl/Alpine。
 
-- 托管部署先升级萌卡 NT 2.4.1 或更新版本；插件服务不绑定节点，账号操作由框架按照 `self_id + client_type` 路由到账号自己的登录节点。
-- 插件通过框架服务 Token 认证后可直接调用管理 API，不需要“系统管理”开关或 action 授权清单。
+- 托管部署先升级萌卡 NT 2.4.4 或更新版本；插件服务不绑定节点，账号操作由框架按照 `self_id + client_type` 路由到账号自己的登录节点。
+- 原生插件通过框架注入的 IPC 通道和包内权限声明调用既有 API，无需填写服务令牌或修改框架。
 - 用户门户通过框架对外地址加 `/user/` 访问，不再在插件内配置 SSL、域名、端口或反向代理。旧独立门户地址需重新分享。
 - 从 2.x 更新：停止插件并备份整个 `data` 目录，导入新包后保留原数据库和主密钥。
 - 从 1.x 升级：必须使用独立新目录和全新的 `data/user-system-v2.db`，不读取、迁移或修改 1.x 旧库，旧配置不能直接复用。

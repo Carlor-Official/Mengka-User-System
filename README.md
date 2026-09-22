@@ -8,13 +8,13 @@
 
 请从 [GitHub Releases](https://github.com/Carlor-Official/Mengka-User-System/releases/latest) 下载与系统架构对应的外发包：
 
-当前版本：**2.1.1**，需萌卡 NT **2.4.4 或更新版本**。本版修复用户分页、等级状态、账号归属与授权同步，并统一框架同域门户。提供 Windows AMD64、Linux AMD64 和 Linux ARM64 三个平台的 `native-ipc-v1` 外发包。详细变更与升级说明见 [v2.1.1 版本说明](release-notes-v2.1.1.md)。
+当前版本：**2.1.2**，需萌卡 NT **2.4.4 或更新版本**。本版新增代理等级、套餐折扣与补差价升级；管理端单独配置，用户从个人信息进入代理升级。提供 Windows AMD64、Linux AMD64 和 Linux ARM64 三个平台的 `native-ipc-v1` 外发包。详细变更与升级说明见 [v2.1.2 版本说明](release-notes-v2.1.2.md)。
 
 | 平台 | 外发包 | 启动入口 |
 | --- | --- | --- |
-| Windows AMD64 | `mengka-user-system-2.1.1-managed-native-windows-amd64.zip` | 框架插件导入 |
-| Linux AMD64 | `mengka-user-system-2.1.1-managed-native-linux-amd64.tar.gz` | 框架插件导入 |
-| Linux ARM64 | `mengka-user-system-2.1.1-managed-native-linux-arm64.tar.gz` | 框架插件导入 |
+| Windows AMD64 | `mengka-user-system-2.1.2-managed-native-windows-amd64.zip` | 框架插件导入 |
+| Linux AMD64 | `mengka-user-system-2.1.2-managed-native-linux-amd64.tar.gz` | 框架插件导入 |
+| Linux ARM64 | `mengka-user-system-2.1.2-managed-native-linux-arm64.tar.gz` | 框架插件导入 |
 
 下载后可使用同一 Release 中的 `SHA256SUMS.txt` 校验文件完整性。不同系统和架构的外发包不能混用。
 

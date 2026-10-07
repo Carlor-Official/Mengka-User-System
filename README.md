@@ -6,13 +6,13 @@
 
 ## 下载
 
-当前正式版本：**3.0.0**，最低框架为官方萌卡 NT **2.5.3**。请阅读 [3.0.0 版本与升级说明](release-notes-v3.0.0.md)，再从 [GitHub Release](https://github.com/Carlor-Official/Mengka-User-System/releases/tag/v3.0.0) 下载对应平台包。
+当前正式版本：**3.0.1**，最低框架为官方萌卡 NT **2.5.3**。请阅读 [3.0.1 版本与升级说明](release-notes-v3.0.1.md)，再从 [GitHub Release](https://github.com/Carlor-Official/Mengka-User-System/releases/tag/v3.0.1) 下载对应平台包。
 
 | 平台 | 外发包 |
 | --- | --- |
-| Windows AMD64 | `mengka-user-system-3.0.0-managed-native-windows-amd64.zip` |
-| Linux AMD64 | `mengka-user-system-3.0.0-managed-native-linux-amd64.tar.gz` |
-| Linux ARM64 | `mengka-user-system-3.0.0-managed-native-linux-arm64.tar.gz` |
+| Windows AMD64 | `mengka-user-system-3.0.1-managed-native-windows-amd64.zip` |
+| Linux AMD64 | `mengka-user-system-3.0.1-managed-native-linux-amd64.tar.gz` |
+| Linux ARM64 | `mengka-user-system-3.0.1-managed-native-linux-arm64.tar.gz` |
 
 在框架「插件 → 插件导入」上传对应包。`managed-native` 表示由框架托管启动的原生 IPC 包；每个平台只需一个包，没有另一套独立服务版。下载后按同一 Release 的 `SHA256SUMS.txt` 校验文件完整性。
 
@@ -20,6 +20,7 @@
 
 - Go 程序内嵌前端，安装运行无需 Node、PHP、better-sqlite3 或 C++ 运行库。Linux 按 GLIBC 2.28 及以上兼容环境提供静态构建。
 - 用户门户通过框架对外地址下的 `/user/` 访问。管理员使用框架 SSO 或统一登录页的框架管理员账号密码；按权限切换端视角，不公开管理数据。
+- 3.0.1 修复 QQ 添加弹窗和商品时长布局；管理员可切到可操作的用户端，QQ、余额与订单和客户隔离。
 - 插件不提供独立 SSL、域名、端口、令牌或反代配置，站点域名字段仅作业务资料。
 - **旧 2.x Node 数据库不能直接覆盖升级。** 停止插件并备份整个数据目录及主密钥，旧库需先完成单独迁移和账目核对；未完成迁移的环境继续使用原版本。当前迁移工具并非通用生产迁移工具，外发包也不附带自动迁移程序。
 - 全新安装使用空数据目录；已验证的 Go schema 5 数据库及原主密钥可保留数据更新。检测到未迁移旧库时程序拒绝初始化，保护旧数据。
@@ -29,4 +30,4 @@
 
 ## 首次导入入口配置
 
-若提示 `MENGKA_PLUGIN_GATEWAY_TEMPLATE` 且配置按钮灰色，先在上传窗口“插件 ID（旧版包）”填入 `mengka-user-system`，保持“包含 Web 管理端”勾选。点击“配置访问入口”进行框架一键配置，成功后返回导入；端口在框架配置中自动分配，自定义起始端口位于高阶设置。完整步骤见 [3.0.0 安装说明](release-notes-v3.0.0.md#首次导入提示入口未配置)。
+若提示 `MENGKA_PLUGIN_GATEWAY_TEMPLATE` 且配置按钮灰色，先在上传窗口“插件 ID（旧版包）”填入 `mengka-user-system`，保持“包含 Web 管理端”勾选。点击“配置访问入口”进行框架一键配置，成功后返回导入；端口在框架配置中自动分配，自定义起始端口位于高阶设置。完整步骤见 [3.0.1 安装说明](release-notes-v3.0.1.md#首次导入提示入口未配置)。

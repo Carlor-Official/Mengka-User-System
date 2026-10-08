@@ -6,7 +6,7 @@
 
 当前版本：**3.0.6**，最低框架版本：**2.5.3**。
 
-查看 [更新日志](release-notes-v3.0.6.md)，从 [GitHub Release](https://github.com/Carlor-Official/Mengka-User-System/releases/tag/v3.0.6) 下载对应系统的安装包。
+查看 [最新更新日志](release-notes/release-notes-v3.0.6.md) 或 [历史版本说明](release-notes/README.md)，从 [GitHub Release](https://github.com/Carlor-Official/Mengka-User-System/releases/tag/v3.0.6) 下载对应系统的安装包。
 
 | 系统 | 安装包 |
 | --- | --- |

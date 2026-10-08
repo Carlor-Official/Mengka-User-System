@@ -1,0 +1,42 @@
+# 更新说明
+
+最新正式版本：[v3.0.6](release-notes-v3.0.6.md) · [项目首页](../README.md)
+
+后续版本更新说明统一放在本目录。
+
+## 历史版本
+
+- [v3.0.6](release-notes-v3.0.6.md)
+- [v3.0.5](release-notes-v3.0.5.md)
+- [v3.0.4](release-notes-v3.0.4.md)
+- [v3.0.3](release-notes-v3.0.3.md)
+- [v3.0.2](release-notes-v3.0.2.md)
+- [v3.0.1](release-notes-v3.0.1.md)
+- [v3.0.0](release-notes-v3.0.0.md)
+- [v2.1.2](release-notes-v2.1.2.md)
+- [v2.1.1](release-notes-v2.1.1.md)
+- [v2.1.0](release-notes-v2.1.0.md)
+- [v2.0.17（Linux 托管包）](release-notes-v2.0.17-native-ipc.md)
+- [v2.0.16](release-notes-v2.0.16.md)
+- [v2.0.15](release-notes-v2.0.15.md)
+- [v2.0.14](release-notes-v2.0.14.md)
+- [v2.0.13](release-notes-v2.0.13.md)
+- [v2.0.12](release-notes-v2.0.12.md)
+- [v2.0.11](release-notes-v2.0.11.md)
+- [v2.0.10](release-notes-v2.0.10.md)
+- [v2.0.9](release-notes-v2.0.9.md)
+- [v2.0.8](release-notes-v2.0.8.md)
+- [v2.0.7](release-notes-v2.0.7.md)
+- [v2.0.6](release-notes-v2.0.6.md)
+- [v2.0.5](release-notes-v2.0.5.md)
+- [v2.0.2](release-notes-v2.0.2.md)
+- [v2.0.1](release-notes-v2.0.1.md)
+- [v2.0.0](release-notes-v2.0.0.md)
+- [v1.0.7](release-notes-v1.0.7.md)
+- [v1.0.6](release-notes-v1.0.6.md)
+- [v1.0.5](release-notes-v1.0.5.md)
+- [v1.0.4](release-notes-v1.0.4.md)
+- [v1.0.3](release-notes-v1.0.3.md)
+- [v1.0.2](release-notes-v1.0.2.md)
+- [v1.0.1](release-notes-v1.0.1.md)
+- [v1.0.0](release-notes-v1.0.0.md)

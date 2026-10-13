@@ -1,11 +1,12 @@
 # 更新说明
 
-最新正式版本：[v3.0.7](release-notes-v3.0.7.md) · [项目首页](../README.md)
+最新正式版本：[v3.0.8](release-notes-v3.0.8.md) · [项目首页](../README.md)
 
 后续版本更新说明统一放在本目录。
 
 ## 历史版本
 
+- [v3.0.8](release-notes-v3.0.8.md)
 - [v3.0.7](release-notes-v3.0.7.md)
 - [v3.0.6](release-notes-v3.0.6.md)
 - [v3.0.5](release-notes-v3.0.5.md)

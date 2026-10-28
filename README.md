@@ -4,15 +4,15 @@
 
 ## 下载
 
-当前版本：**3.0.13**，最低框架版本：**3.0.2**。本版不兼容框架 2.x。
+当前版本：**3.0.14**，最低框架版本：**3.0.2**。本版不兼容框架 2.x。
 
-查看 [最新更新日志](release-notes/release-notes-v3.0.13.md) 或 [历史版本说明](release-notes/README.md)，从 [GitHub Release](https://github.com/Carlor-Official/Mengka-User-System/releases/tag/v3.0.13) 下载对应系统的安装包。
+查看 [最新更新日志](release-notes/release-notes-v3.0.14.md) 或 [历史版本说明](release-notes/README.md)，从 [GitHub Release](https://github.com/Carlor-Official/Mengka-User-System/releases/tag/v3.0.14) 下载对应系统的安装包。
 
 | 系统 | 安装包 |
 | --- | --- |
-| Windows AMD64 | `mengka-user-system-3.0.13-managed-native-windows-amd64.zip` |
-| Linux AMD64 | `mengka-user-system-3.0.13-managed-native-linux-amd64.tar.gz` |
-| Linux ARM64 | `mengka-user-system-3.0.13-managed-native-linux-arm64.tar.gz` |
+| Windows AMD64 | `mengka-user-system-3.0.14-managed-native-windows-amd64.zip` |
+| Linux AMD64 | `mengka-user-system-3.0.14-managed-native-linux-amd64.tar.gz` |
+| Linux ARM64 | `mengka-user-system-3.0.14-managed-native-linux-arm64.tar.gz` |
 
 ## 安装与更新
 
@@ -28,6 +28,6 @@
 
 用户通过框架 Web 地址下的 `/user/` 直接访问，无需先登录框架。域名反向代理应指向框架 Web 服务，不能指向插件管理网关。管理员可从框架打开管理端，也可使用框架管理员账号登录。
 
-3.0.13 适配框架 3.0.2 的账号和等级任务管理，修复短信确认、免费体验授权同步与手机菜单，管理员可在账号配置中生成随机指纹。普通编辑保留原有指纹及登录缓存。
+3.0.14 对齐框架 3.0.2 的界面布局和按钮交互，优化手机账号卡片、明暗模式与短屏弹窗。用户门户和统一登录地址支持自动识别、自定义及恢复默认，两处入口配置同步生效。
 
 首次导入遇到入口配置提示，请查看 [导入说明](import-guide.md)；遇到加密密钥权限提示，请查看 [处理方法](import-key-permissions.md)。
